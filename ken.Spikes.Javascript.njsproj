@@ -20,6 +20,12 @@
     <Content Include=".npmignore" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Compile Include="test\training\stack.js">
+      <TestFramework>Mocha</TestFramework>
+    </Compile>
+    <Compile Include="test\training\prototype.js">
+      <TestFramework>Mocha</TestFramework>
+    </Compile>
     <Compile Include="wallaby.js" />
     <Compile Include="lib\index.js" />
     <Content Include="test\mocha.json" />
