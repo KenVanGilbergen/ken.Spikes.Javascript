@@ -19,21 +19,23 @@
         },
         "testFramework": "mocha",
         bootstrap: function (wallaby) {
+            var runner = wallaby.testFramework;
+            //console.log(runner);
+
+            //runner.ui('tdd');
+            runner.ui('bdd');
             
-            //wallaby.testFramework.ui('tdd');
-            wallaby.testFramework.ui('bdd');
-            
-            wallaby.testFramework.timeout(5000);
+            runner.timeout(5000);
             
             // https://mochajs.org/#reporters
-            //wallaby.testFramework.reported('tap');
-            //wallaby.testFramework.reported('spec');
-            //wallaby.testFramework.reported('dot');
-            //wallaby.testFramework.reported('list');
-            //wallaby.testFramework.reported('progress');
-            //wallaby.testFramework.reported('nyan');
-            //wallaby.testFramework.reported('xunit');
-            wallaby.testFramework.reported('min');
+            //runner.reporter('tap');
+            //runner.reporter('spec');
+            //runner.reporter('dot');
+            //runner.reporter('list');
+            //runner.reporter('progress');
+            //runner.reporter('nyan');
+            //runner.reporter('xunit');
+            runner.reporter('min');
         }
     };
 };
