@@ -1,0 +1,37 @@
+{
+  "name": "ken-spikes-javascript",
+  "description": "Testing basic node and javascript functionality with visual studio.",
+  "version": "0.1.0",
+  "homepage": "https://ict.ken.be/javascript",
+  "author": {
+    "name": "Ken Van Gilbergen",
+    "email": "mail@ken.be"
+  },
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KenVanGilbergen/ken.Spikes.Javascript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KenVanGilbergen/ken.Spikes.Javascript.git/issues"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "training"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "cls && mocha test/**/*.js --watch -R min"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.2.0",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "chai-json-equal": "0.0.1",
+    "lodash-node": "^3.10.1",
+    "q": "^1.4.1"
+  }
+}

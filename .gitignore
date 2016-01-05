@@ -1,0 +1,6 @@
+/bin
+/obj
+*.suo
+.ntvs_analysis.dat
+node_modules
+
