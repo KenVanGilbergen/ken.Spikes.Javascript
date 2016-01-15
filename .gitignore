@@ -6,3 +6,5 @@
 node_modules
 npm-debug.log
 
+
+/.ntvs_analysis.dat.tmp
