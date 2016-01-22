@@ -100,5 +100,18 @@ describe('scope', function () {
             done();
         });
     });
+    
+    it('hoisting', function () {
+        var a = 2;
+        foo();  // works because `foo()` declaration is "hoisted"
+        function foo() {
+            expect(a).be.undefined;
+            a = 3;
+            expect(a).to.eql(3);
+            var a;  // declaration is "hoisted" to the top of `foo()`
+            expect(a).to.eql(3);
+        }
+        expect(a).to.eql(2);
+    });
 
 });

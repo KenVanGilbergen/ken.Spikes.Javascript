@@ -136,6 +136,26 @@ describe('types', function () {
         expect("42" === 42).be.false;
         expect("42" === "42").be.true;
     });
+
+    it('equality for arrays', function () {
+        var a = [1, 2, 3];
+        var b = [1, 2, 3];
+        var c = "1,2,3";
+        
+        expect(a == c).be.true;
+        expect(b == c).be.true;
+
+        expect(a == b).be.false;
+    });
+    
+    it('no strict inequality', function () {
+        var a = 42;
+        var b = "foo";
+                
+        expect(a < b).be.false;
+        expect(a > b).be.false;
+        expect(a == b).be.false;
+    });
     
     it('const from ES2015', function () {
         const a = 12.34;
