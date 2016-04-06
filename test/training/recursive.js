@@ -13,9 +13,7 @@ describe('recursive', function () {
     
     it('using named function', function () {
         var factorial = function myself(n) {
-            if (n <= 1) {
-                return 1;
-            }
+            if (n <= 1) return 1;
             return n * myself(n - 1);
         }
         expect(factorial(3)).to.eql(6);
@@ -23,9 +21,7 @@ describe('recursive', function () {
     
     it('using callee', function () {
         var factorial = function (n) {
-            if (n <= 1) {
-                return 1;
-            }
+            if (n <= 1) return 1;
             return n * arguments.callee(n - 1);
         }
         expect(factorial(3)).to.eql(6);
