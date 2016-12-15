@@ -171,4 +171,12 @@ describe('types', function () {
         expect(a === b).be.false;
     });
 
+    it('symbol from ES2015', function () {
+        expect('abc' === 'abc').be.true;
+        expect(1 === 1).be.true;
+	    expect([1, 2, 3] === [1, 2, 3]).be.false;
+	    expect({ a: 1 } === { a: 1 }).be.false;
+	    expect({ } === { }).be.false;
+    });
+
 });

@@ -20,6 +20,9 @@
     <Content Include=".npmignore" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Compile Include="test\training\closures.js" />
+    <Compile Include="test\training\replace.js" />
+    <Compile Include="test\training\date.js" />
     <Compile Include="test\training\stack.js">
       <TestFramework>Mocha</TestFramework>
     </Compile>

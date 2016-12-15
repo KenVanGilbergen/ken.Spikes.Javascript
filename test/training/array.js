@@ -6,7 +6,14 @@ var chai = require("chai");
 var expect = chai.expect;
 
 describe('array', function () {
-   
+    
+    it('is no basic type', function () {
+        expect(typeof {} === 'object').be.true;
+        expect(typeof 'a' === 'string').be.true;
+        expect(typeof 1).to.eq('number');
+        expect(typeof [] === 'object').be.true;
+    });
+
     it('push - add as last item', function () {
         var a = [1, 2];
         a.push(3);
@@ -81,8 +88,16 @@ describe('array', function () {
             done();
         }
     });
-
+    
     // sort([compareFunction])
+    it('numbers are sorted alphanumeric', function () {
+	    expect([1, 2, 5, 10].sort()).to.eql([1, 10, 2, 5]);
+    });
+    
+    it('correctly sort numbers', function () {
+        expect([1, 2, 5, 10].sort((a, b) => a-b)).to.eql([1, 2, 5,10]);
+    });
+
     // concat(value1, value2, ..., valueN)
     // join(separator)
     // slice(begin[, end])
